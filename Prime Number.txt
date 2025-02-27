@@ -1,0 +1,16 @@
+class Solution {
+    static boolean isPrime(int n) {
+        // code here
+        int count = 0;
+        for(int div = 2; div*div<=n;div++){
+            if(n%div==0){
+                count++;
+                break;
+            }
+        }
+        if(count==0){
+            return true;
+        }
+        return false;
+    }
+}
