@@ -1,0 +1,15 @@
+class Solution {
+    public static int[] lcmAndGcd(int a, int b) {
+        int oriA = a;
+        int oriB = b;
+        while(a%b!=0){
+            int rem = a%b;
+            a=b;
+            b=rem;
+        }
+        int gcd = b;
+        int lcm = (oriA*oriB)/gcd;
+        int[] res = {lcm,gcd};
+        return res;
+    }
+}
